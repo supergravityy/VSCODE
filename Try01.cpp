@@ -1,3 +1,4 @@
+// 24.04.22 18:15 ë¥˜ì„±ìˆ˜
 #include <iostream>
 #include <stdio.h>
 
@@ -5,16 +6,16 @@ using namespace std;
 
 int main()
 {
-    std::cout << "ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä\n";
+    std::cout << "ì´ë¦„ì„ ìž…ë ¥í•˜ì„¸ìš”\n";
 
     std::string name;
     std::cin>>name;
 
-    std::cout << "³ªÀÌ¸¦ ÀÔ·ÂÇÏ¼¼¿ä\n";
+    std::cout << "ë‚˜ì´ë¥¼ ìž…ë ¥í•˜ì„¸ìš”\n";
     int age;
     std::cin>>age;
 
-    printf("¾È³çÇÏ¼¼¿ä! %s´Ô(%d¼¼)",name,age);
+    printf("ì•ˆë…•í•˜ì„¸ìš”! %së‹˜(%dì„¸)",name,age);
 
     return 0;
 }
