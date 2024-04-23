@@ -8,6 +8,8 @@ int main()
     std::cin >> name;
 
     if(name == "홍길동") std::cout<<"\n남자";
-    else if(name == "여자") std::cout<<"\n여자";
+    else if(name == "성춘향") std::cout<<"\n여자";
     else std::cout<<"\n모르겠어요";
+
+    return 0;
 }
