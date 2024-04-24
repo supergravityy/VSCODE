@@ -34,7 +34,8 @@ int main()
         for (int i = 0; i < number; i++) {
             cout << list[i] << endl;
         }
-    } else {
+    } 
+    else {
         // 특정 국가 이름 검색
         bool found = false;
         for (int i = 0; i < number; i++) {
