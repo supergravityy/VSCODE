@@ -67,7 +67,8 @@ int main()
 
     cout << "This process is using Mem\n"<< endl;
     // 그냥 메모리로 접근해서 보면, 삭제를 했어도, 벡터의 유효한 스코프내에서 삭제됬을 뿐, 메모리에는 그대로이다.
-    // 또한 인덱스 마지막 값이 복사되어 끝에 추가되어 보인다.
+    // 또한 인덱스 마지막 값이 복사되어 끝에 추가되어 보인다. -> erase 메소드는 해당 인덱스 후의 인덱스들을 그대로 복사하여, 앞 인덱스번호에 대입
+
     confirm_mem(Vec);
 
     cout << "This process is using vec_method\n" << endl;
