@@ -28,6 +28,7 @@ int ISDIGIT(string str1, string str2)
 int main()
 {
     string str1, str2;
+    // string 클래스는 문자열의 끝에 NULL이 들어가지 않고, 문자열의 길이를 동적으로 변경가능
     
     do
     {
