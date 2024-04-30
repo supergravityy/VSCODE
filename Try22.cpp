@@ -4,29 +4,25 @@ using namespace std;
 
 int ISDIGIT(string str1, string str2)
 {
-    int str1_digit = 0, str2_digit = 0;
-    int i;
+    int str1_digit = 1, str2_digit = 1; 
 
-    // 널 전까지만 카운트
-    for( i =0; i<str1.size()-1; i++)
+    
+    for(int i = 0; i < str1.size(); i++)
         if(!isdigit(str1[i]))
-            break;
-    
+        {
+            str1_digit = 0; 
+            break; 
+        }
 
-    if(i == str1.size())
-        str1_digit = 1;
-
-    for( i =0; i<str2.size()-1; i++)
+   
+    for(int i = 0; i < str2.size(); i++)
         if(!isdigit(str2[i]))
-            break;
+        {
+            str2_digit = 0; 
+            break; 
+        }
 
-    if(i == str1.size())
-        str1_digit = 1;
-    
-    if(str1_digit && str2_digit)
-        return 0;
-
-    return 1;
+    return str1_digit && str2_digit;
 }
 
 int main()
