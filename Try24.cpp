@@ -59,7 +59,7 @@ int main()
         if(ret_val == EOF || ret_val !=3)
             break; //Eof에 도달하거나, 필요한 모든 필드를 읽지 못하였을때
 
-        printf("Name : %s\n , age : %d, birth : %s\n",temp.name,temp.age,temp.birth);
+        printf("Name : %s, age : %d, birth : %s\n",temp.name,temp.age,temp.birth);
         students.push_back(temp);
         size++;
     }
@@ -72,7 +72,7 @@ int main()
     }
 
 
-    double avg;
+    double avg=0;
 
     for(int i =0; i<size; i++)
         avg+=students[i].age;
@@ -85,9 +85,9 @@ int main()
     printf("This is the information of the students arranged in order of birth date.\n\n");
 
     for(int i =0; i<size;i++)
-        printf("Name : %s\n , age : %d, birth : %s\n",students[i].name,students[i].age,students[i].birth);
+        printf("Name : %s, age : %d, birth : %s\n",students[i].name,students[i].age,students[i].birth);
 
-    printf("The oldest students is '%s'\n",students[size-1].name);
+    printf("\n\nThe oldest students is '%s'\n",students[size-1].name);
 
     fclose(fp);
 
