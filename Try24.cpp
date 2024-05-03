@@ -21,7 +21,7 @@ bool birthCMP(const A_person& A, const A_person& B)
     sscanf(B.birth, "%4d.%2d.%2d",&yearB,&monthB,&dayB);
 
     if(yearA != yearB) return yearA>yearB;
-    if(monthA != monthB) return monthB>monthB;
+    if(monthA != monthB) return monthA>monthB;
     return dayA >= dayB;
 }
 
