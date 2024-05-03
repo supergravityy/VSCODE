@@ -9,7 +9,7 @@
 
 using namespace std;
 
-typedef struct stdINFO
+struct stdINFO
 {
     int stdNo, stdAge, stdAge_ko;
     string stdName, stdBirth;
