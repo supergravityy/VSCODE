@@ -17,13 +17,15 @@ struct stdINFO
     stdINFO() : stdNo(0), stdAge(0), stdAge_ko(0) {}
     // 생성자 함수 : 생성될때만 실행됨.
 };
+// namespace를 쓰는 이유 : 같은 이름의 변수여도 차별성을 두기 위해서
+// gary::name tony::name 이런식으로 -> 그래서 함부로 using namespace를 쓰면 안됨 -> namespace를 생략이 가능해서
 
 namespace cal
 {
     void Check_Birth_Input(vector <stdINFO>& stdInfoVec, int i);
     void CalAge_and_Input(vector<stdINFO>& stdInfoVec, int i);
     double Cal_Student_AgeAVG(vector<stdINFO> stdInfoVec, bool useKoreanAge);
-}
+};
 
 namespace sel
 {
@@ -31,7 +33,7 @@ namespace sel
     void Select_StudentAVG(int i, vector<stdINFO>& stdInfoVec);
     void Select_StudentBirthDay(int i, vector<stdINFO>& stdInfoVec);
     void Select_editing(int i, int Num, vector<stdINFO>& stdInfoVec);
-}
+};
 
 namespace pnt
 {
