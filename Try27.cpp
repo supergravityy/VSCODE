@@ -27,7 +27,7 @@ int main()
 
     while(1)
     {
-        Num = rand()%45;
+        Num = rand()%45+1;
 
         if(check_dupli(lotto,Num))
             lotto[count++] = Num;
