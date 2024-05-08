@@ -50,6 +50,7 @@ int main(char argv, char** args)
         break;
     }
 
+    file.close();
     return 0;
 }
 
