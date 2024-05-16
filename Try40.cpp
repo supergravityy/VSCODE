@@ -70,7 +70,7 @@ class Trig : public Shape
         printf("Tri\'s Area : %d",W*H/2);
     }
 
-    void print_Info() // 오버라이팅
+    void print_Info() // override
     {
         printf("Number of Side : %d, Width : %d, Tri\'s Area : %lf\n",this->sideNum, this->width, this->Area());
     }
