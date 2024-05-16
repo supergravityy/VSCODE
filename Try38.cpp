@@ -7,16 +7,16 @@ class Shape
 {
     public:
 
-    Shape(int w,int h) 
-    : width(w), height(h) {} // 생성자
+    Shape(int w,int n) 
+    : width(w), sideNum(n) {} // 생성자
 
     void print_Info() // 내용출력
     {
-        printf("Height : %d, Width : %d\n",this->height, this->width);
+        printf("Number of Side : %d, Width : %d\n",this->sideNum, this->width);
     }
 
     protected: // 변수
-    int height = 0;
+    int sideNum = 0;
     int width = 0;
 
 };
@@ -24,23 +24,41 @@ class Shape
 class Rect : public Shape
 {
     public : 
-    Rect(int w, int h) : Shape(w,h) {}
+    Rect(int w, int h) : Shape(this-> width,this-> sideNum) 
+    {
+        this->sideNum = 4;
+        this->width = w;
+        this->height = h;
+    }
 
     double Area()
     {
         return (double)(width * height);
     }
+
+    protected:
+
+    int height = 0;
 };
 
 class Trig : public Shape
 {
     public : 
-    Trig(int w, int h) : Shape(w,h) {}
+    Trig(int w, int h) : Shape(this-> width,this-> sideNum) 
+    {
+        this->sideNum = 4;
+        this->width = w;
+        this->height = h;
+    }
 
     double Area()
     {
         return (double)(width * height)/2;
     }
+
+    protected:
+
+    int height = 0;
 };
 
 int main()
