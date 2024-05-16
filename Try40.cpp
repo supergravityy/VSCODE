@@ -1,7 +1,7 @@
 #include<iostream>
-#include<string>
 
 using namespace std;
+
 class Shape
 {
     public:
@@ -35,6 +35,11 @@ class Rect : public Shape
         printf("Number of Side : %d, Width : %d, Rect\'s Area : %lf\n",this->sideNum, this->width, this->Area());
     }
 
+    void print_Info(int W, int H)
+    {
+        printf("Rect\'s Area : %d",W*H);
+    }
+
     double Area()
     {
         return (double)(width * height);
@@ -60,6 +65,11 @@ class Trig : public Shape
         return (double)(width * height)/2;
     }
 
+    void print_Info(int W, int H) // 오버로딩 : 함수 이름이 똑같더라도 받는 파라미터의 선언이 다르면 다르게 처리 
+    {
+        printf("Tri\'s Area : %d",W*H/2);
+    }
+
     void print_Info() // 오버라이팅
     {
         printf("Number of Side : %d, Width : %d, Tri\'s Area : %lf\n",this->sideNum, this->width, this->Area());
@@ -79,11 +89,15 @@ int main()
     rect.Shape::print_Info(); // 오버로딩 되기전의 메소드 출력
     putchar('\n');
     rect.print_Info();
+    putchar('\n');
+    rect.print_Info(5,10);
 
     printf("\nTri info :");
     rect.Shape::print_Info();
     putchar('\n');
     tri.print_Info();
+    putchar('\n');
+    tri.print_Info(5,10);
 
     return 0;
 }
