@@ -3,7 +3,7 @@
 #include<iostream>
 #include<stdlib.h>
 #include<string.h>
-#include <string>
+#include<string>
 
 using namespace std;
 
@@ -63,7 +63,6 @@ int main()
     }
 
     // 생성자에 알맞은 선언문
-    const char* tmp = company[0].data();
     Choco choco1 = Choco(company[0]);
     Choco choco2 = Choco(company[1]);
     Candy candy1 = Candy(company[2]);
