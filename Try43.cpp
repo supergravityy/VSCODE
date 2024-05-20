@@ -76,14 +76,14 @@ int main()
     plist[3] = &candy2;
 
     // 다운캐스팅 및 출력
-    Choco* ch1 = dynamic_cast<Choco*>(plist[0]);
-    if (ch1) ch1->print_company();
-    Choco* ch2 = dynamic_cast<Choco*>(plist[1]);
-    if (ch2) ch2->print_company();
-    Candy* ca1 = dynamic_cast<Candy*>(plist[2]);
-    if (ca1) ca1->print_company();
-    Candy* ca2 = dynamic_cast<Candy*>(plist[3]);
-    if (ca2) ca2->print_company();
+    Choco* ch1 = (Choco*)(plist[0]);
+    ch1->print_company();
+    Choco* ch2 = (Choco*)(plist[1]);
+    ch2->print_company();
+    Candy* ca1 = (Candy*)(plist[2]);
+    ca1->print_company();
+    Candy* ca2 = (Candy*)(plist[3]);
+    ca2->print_company();
 
     return 0;
 }
